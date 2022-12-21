@@ -39,6 +39,7 @@ a {
 }
 
 nav .top_nav_menu {
+  overflow: hidden;
   width: 100vw;
   height: 7.5rem;
   color: var(--primary-text);
@@ -60,24 +61,28 @@ nav .top_nav_menu .nav_filter {
   border-radius: 30px;
   font-size: 1.3rem;
   font-weight: 600;
-  margin-left: 10rem;
 }
 nav .top_nav_menu .nav_filter span {
-  padding: 1.5rem;
+  padding: 1rem;
 }
 nav .top_nav_menu .nav_filter span:hover {
   cursor: pointer;
   color: var(--primary-text);
 }
+nav .top_nav_menu .nav_filter span:first-of-type {
+  border-right: 0.5px dotted lightgray;
+}
+nav .top_nav_menu .nav_filter span:nth-of-type(2) {
+  border-right: 0.5px dotted lightgray;
+}
 nav .top_nav_menu .nav_menu {
   justify-content: center;
   align-items: center;
-  gap: 1rem;
   font-size: 1.8rem;
   font-weight: 600;
 }
 nav .top_nav_menu a {
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 10px;
 }
 nav .top_nav_menu a:hover {
@@ -149,7 +154,7 @@ nav .top_nav_menu a:hover {
   color: var(--primary-background);
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 846px) {
   nav .top_nav_menu {
     display: flex;
     background-color: var(--primary-header);

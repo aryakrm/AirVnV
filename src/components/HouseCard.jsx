@@ -71,7 +71,7 @@ export default function HouseCard({ house }) {
                         {startDate} - {endDate}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                        {price} night
+                        {price}$ night
                     </Typography>
                 </CardContent>
                 <CardActions disableSpacing>

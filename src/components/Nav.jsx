@@ -51,13 +51,13 @@ function Nav() {
                             onMouseOver={handleMouseOverDate}
                             onMouseOut={handleMouseOutDate}
                         >
-                            | Any week
+                            Any week
                         </span>
                         <span
                             onMouseOver={handleMouseOverGuests}
                             onMouseOut={handleMouseOutGuests}
                         >
-                            | Add Guests
+                            Add Guests
                         </span>
                         <span className="filter__icon">
                             <FilterAltIcon fontSize="large" />
