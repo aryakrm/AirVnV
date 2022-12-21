@@ -10,7 +10,7 @@ function SignIn() {
         <main>
             <Nav />
             <section>
-                <form action="" ref={form}>
+                <form className="signin-form" action="" ref={form}>
                     <span>Login</span>
                     <label htmlFor="country">Welcome to AirVnV</label>
                     <select name="country" ref={country}>

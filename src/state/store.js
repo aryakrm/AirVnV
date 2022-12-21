@@ -1,4 +1,3 @@
-import { nanoid } from 'nanoid';
 import create from 'zustand';
 import { INIT_HOUSES } from './initStoreHouses';
 
@@ -24,7 +23,7 @@ const useStoreHouses = create((set) => ({
             houses: state.houses.filter(({ id }) => id !== houseId),
         }));
     },
-    isEdited: (houseId) => {
+    toggleIsEdited: (houseId) => {
         return set((state) => ({
             houses: state.houses.map((house) =>
                 house.id === houseId

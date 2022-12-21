@@ -48,8 +48,8 @@ nav {
   color: var(--primary-text);
 }
 nav .logo {
-  display: none;
   width: 18rem;
+  display: none;
 }
 nav .nav_menu {
   display: none;
@@ -61,7 +61,7 @@ nav .nav_menu {
 nav .button_nav_menu {
   position: fixed;
   bottom: 0;
-  background-color: var(--primary-background);
+  background-color: red;
   width: 100vw;
   height: 7.5rem;
   border-top: 0.5px solid lightgrey;
@@ -69,10 +69,12 @@ nav .button_nav_menu {
   justify-content: center;
   align-items: center;
 }
+
 .cards {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   gap: 1rem;
 }
 

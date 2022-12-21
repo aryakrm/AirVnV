@@ -9,8 +9,8 @@ nav {
     align-items: center;
     color: colors.$primary_text;
     .logo {
-        display: none;
         width: 18rem;
+        display: none;
     }
     .nav_menu {
         display: none;
@@ -22,14 +22,13 @@ nav {
     .button_nav_menu {
         position: fixed;
         bottom: 0;
-        background-color: colors.$primary_background;
+        // background-color: colors.$primary_background;
+        background-color: red;
         width: 100vw;
         height: 7.5rem;
         border-top: 0.5px solid lightgrey;
         display: flex;
         justify-content: center;
         align-items: center;
-        a {
-        }
     }
 }

@@ -27,18 +27,14 @@ const ExpandMore = styled((props) => {
 }));
 
 export default function HouseCard({ house }) {
-    const {
-        id,
-        name,
-        details,
-        price,
-        location,
-        rate,
-        images,
-        startDate,
-        endDate,
-    } = house;
+    const { id, name, details } = house;
+    const { price, location, rating } = house;
+    const { images, startDate, endDate } = house;
+
     const { guests, bedrooms, beds, baths } = details;
+    const { city, country } = location;
+    const { first, second, third } = images;
+    const { fourth, fifth, sixth } = images;
 
     const [expanded, setExpanded] = React.useState(false);
 
@@ -52,13 +48,19 @@ export default function HouseCard({ house }) {
                 <CardMedia
                     component="img"
                     height="194"
-                    image={images[0]}
+                    image={first}
                     alt={name}
                 />
 
                 <CardContent>
                     <Typography variant="body2" color="text.secondary">
                         {name}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        {city}, {country}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        rate :{rating}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
                         {' '}
