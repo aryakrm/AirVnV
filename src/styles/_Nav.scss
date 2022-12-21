@@ -1,0 +1,35 @@
+@use './colors' as colors;
+
+nav {
+    width: 100vw;
+    height: 10rem;
+    background-color: colors.$primary_background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: colors.$primary_text;
+    .logo {
+        display: none;
+        width: 18rem;
+    }
+    .nav_menu {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        font-size: 2rem;
+    }
+    .button_nav_menu {
+        position: fixed;
+        bottom: 0;
+        background-color: colors.$primary_background;
+        width: 100vw;
+        height: 7.5rem;
+        border-top: 0.5px solid lightgrey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+        }
+    }
+}

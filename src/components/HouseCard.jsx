@@ -26,7 +26,20 @@ const ExpandMore = styled((props) => {
     }),
 }));
 
-export default function HouseCard(house) {
+export default function HouseCard({ house }) {
+    const {
+        id,
+        name,
+        details,
+        price,
+        location,
+        rate,
+        images,
+        startDate,
+        endDate,
+    } = house;
+    const { guests, bedrooms, beds, baths } = details;
+
     const [expanded, setExpanded] = React.useState(false);
 
     const handleExpandClick = () => {
@@ -34,20 +47,29 @@ export default function HouseCard(house) {
     };
 
     return (
-        <div>
-            <Card sx={{ maxWidth: 345 }}>
+        <div key={id}>
+            <Card sx={{ maxWidth: 345 }} variant="outlined">
                 <CardMedia
                     component="img"
                     height="194"
-                    image="/static/images/cards/paella.jpg"
-                    alt="Paella dish"
+                    image={images[0]}
+                    alt={name}
                 />
-                <CardHeader>Something {house.name}</CardHeader>
+
                 <CardContent>
                     <Typography variant="body2" color="text.secondary">
-                        This impressive paella is a perfect party dish and a fun
-                        meal to cook together with your guests. Add 1 cup of
-                        frozen peas along with the mussels, if you like.
+                        {name}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        {' '}
+                        guests: {guests}, bedrooms: {bedrooms}, beds: {beds},
+                        baths: {baths}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        {startDate} - {endDate}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        {price} night
                     </Typography>
                 </CardContent>
                 <CardActions disableSpacing>

@@ -1,15 +1,32 @@
 [data-theme='light'] {
-    --primary-black: #0b0c10;
-    --primary-light-grey: #c5c6c7;
-    --primary-dark-grey: #1f2833;
-    --primary-light-blue: #66fcf1;
-    --primary-dark-blue: #45a29e;
+    --primary-background: white;
+    --primary-text: #3e4531; // or black
+    --primary-header: #d1e5a6; // or black
+    --primary-button: #ece099;
+    --primary-buttonHover: #f7dc93;
 }
 
+// #D1E5A6 light green
+// #3E4531 dark green
+// #ECE099 light gold
+// #F7DC93 dark gold
+
+// background > #0b0c10
+// header > #66fcf1
+// text > #c5c6c7
+// button > #45a29e
+//
+
 [data-theme='dark'] {
-    --primary-black: #0b0c10;
-    --primary-light-grey: #c5c6c7;
-    --primary-dark-grey: #1f2833;
-    --primary-light-blue: #66fcf1;
-    --primary-dark-blue: #45a29e;
+    --primary-background: #0b0c10;
+    --primary-text: #c5c6c7;
+    --primary-header: #66fcf1;
+    --primary-button: #45a29e;
+    --primary-buttonHover: #1f2833;
 }
+
+$primary_background: var(--primary-background);
+$primary_text: var(--primary-text);
+$primary_header: var(--primary-header);
+$primary_button: var(--primary-button);
+$primary_buttonHover: var(--primary-buttonHover);

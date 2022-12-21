@@ -11,7 +11,9 @@ const INIT_HOUSES = [
         price: '500$',
         location: 'Ibiza',
         rate: 5,
-        images: [],
+        images: [
+            'https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070_1280.jpg',
+        ],
         timeStamp: Date.now(),
         startDate: '04/01/2023',
         endDate: '10/01/2023',
@@ -51,7 +53,9 @@ const INIT_HOUSES = [
         price: '100$',
         location: 'Berlin',
         rate: 4.3,
-        images: [],
+        images: [
+            'https://cdn.pixabay.com/photo/2016/06/24/10/47/house-1477041_1280.jpg',
+        ],
         timeStamp: Date.now(),
         startDate: '04/01/2023',
         endDate: '10/01/2023',

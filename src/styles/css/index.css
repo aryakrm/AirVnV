@@ -1,0 +1,79 @@
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Slab", serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+[data-theme=light] {
+  --primary-background: white;
+  --primary-text: #3e4531;
+  --primary-header: #d1e5a6;
+  --primary-button: #ece099;
+  --primary-buttonHover: #f7dc93;
+}
+
+[data-theme=dark] {
+  --primary-background: #0b0c10;
+  --primary-text: #c5c6c7;
+  --primary-header: #66fcf1;
+  --primary-button: #45a29e;
+  --primary-buttonHover: #1f2833;
+}
+
+nav {
+  width: 100vw;
+  height: 10rem;
+  background-color: var(--primary-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-text);
+}
+nav .logo {
+  display: none;
+  width: 18rem;
+}
+nav .nav_menu {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+}
+nav .button_nav_menu {
+  position: fixed;
+  bottom: 0;
+  background-color: var(--primary-background);
+  width: 100vw;
+  height: 7.5rem;
+  border-top: 0.5px solid lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+/*# sourceMappingURL=index.css.map */
