@@ -2,6 +2,7 @@
 
 nav {
     .top_nav_menu {
+        overflow: hidden;
         width: 100vw;
         height: 7.5rem;
         color: colors.$primary_text;
@@ -18,36 +19,80 @@ nav {
             align-items: center;
             justify-content: center;
             gap: 2rem;
-            padding: 1.5rem;
             background-color: colors.$primary_background;
             border-radius: 30px;
             font-size: 1.3rem;
             font-weight: 600;
             span {
+                padding: 1rem;
                 &:hover {
                     cursor: pointer;
                     color: colors.$primary_text;
                 }
-            }
-            button {
-                background: none;
-                border: none;
-                border-radius: 50%;
+                &:first-of-type {
+                    border-right: 0.5px dotted lightgray;
+                }
+                &:nth-of-type(2) {
+                    border-right: 0.5px dotted lightgray;
+                }
             }
         }
         .nav_menu {
             justify-content: center;
             align-items: center;
-            gap: 1rem;
             font-size: 1.8rem;
             font-weight: 600;
         }
         a {
-            padding: 2rem;
+            padding: 1.5rem;
             border-radius: 10px;
             &:hover {
                 color: colors.$primary_background;
             }
+        }
+    }
+}
+.filter__box__wrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .filter__box {
+        &__location {
+            padding: 3rem 9rem;
+            background-color: colors.$primary_text;
+            border-radius: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            color: colors.$primary_background;
+            transition: all 0.3s;
+            position: fixed;
+            top: 75px;
+        }
+        &__date {
+            padding: 4rem 9rem;
+            background-color: colors.$primary_text;
+            border-radius: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            color: colors.$primary_background;
+            transition: all 0.3s;
+            position: fixed;
+            top: 75px;
+        }
+        &__guests {
+            padding: 4rem 9rem;
+            background-color: colors.$primary_text;
+            border-radius: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            color: colors.$primary_background;
+            transition: all 0.3s;
+            position: fixed;
+            top: 75px;
         }
     }
 }
@@ -74,7 +119,7 @@ nav {
     }
 }
 
-@media only screen and (min-width: '600px') {
+@media only screen and (min-width: '846px') {
     nav {
         .top_nav_menu {
             display: flex;

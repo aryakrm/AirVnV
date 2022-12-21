@@ -52,6 +52,7 @@ a {
 }
 
 nav .top_nav_menu {
+  overflow: hidden;
   width: 100vw;
   height: 7.5rem;
   color: var(--primary-text);
@@ -69,34 +70,79 @@ nav .top_nav_menu .nav_filter {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  padding: 1.5rem;
   background-color: var(--primary-background);
   border-radius: 30px;
   font-size: 1.3rem;
   font-weight: 600;
 }
+nav .top_nav_menu .nav_filter span {
+  padding: 1rem;
+}
 nav .top_nav_menu .nav_filter span:hover {
   cursor: pointer;
   color: var(--primary-text);
 }
-nav .top_nav_menu .nav_filter button {
-  background: none;
-  border: none;
-  border-radius: 50%;
+nav .top_nav_menu .nav_filter span:first-of-type {
+  border-right: 0.5px dotted lightgray;
+}
+nav .top_nav_menu .nav_filter span:nth-of-type(2) {
+  border-right: 0.5px dotted lightgray;
 }
 nav .top_nav_menu .nav_menu {
   justify-content: center;
   align-items: center;
-  gap: 1rem;
   font-size: 1.8rem;
   font-weight: 600;
 }
 nav .top_nav_menu a {
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 10px;
 }
 nav .top_nav_menu a:hover {
   color: var(--primary-background);
+}
+
+.filter__box__wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.filter__box__wrapper .filter__box__location {
+  padding: 3rem 9rem;
+  background-color: var(--primary-text);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--primary-background);
+  transition: all 0.3s;
+  position: fixed;
+  top: 75px;
+}
+.filter__box__wrapper .filter__box__date {
+  padding: 4rem 9rem;
+  background-color: var(--primary-text);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--primary-background);
+  transition: all 0.3s;
+  position: fixed;
+  top: 75px;
+}
+.filter__box__wrapper .filter__box__guests {
+  padding: 4rem 9rem;
+  background-color: var(--primary-text);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--primary-background);
+  transition: all 0.3s;
+  position: fixed;
+  top: 75px;
 }
 
 .button_nav_menu {
@@ -121,7 +167,7 @@ nav .top_nav_menu a:hover {
   color: var(--primary-background);
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 846px) {
   nav .top_nav_menu {
     display: flex;
     background-color: var(--primary-header);
@@ -136,27 +182,36 @@ nav .top_nav_menu a:hover {
     display: none;
   }
 }
-.cards {
+.card {
+  width: 30rem;
+  border-radius: 20px !important;
+  margin: 2rem;
+  border: none !important;
+}
+.card .card__details {
+  margin-top: 0.5rem;
+}
+.card .card__details:last-of-type {
+  margin-top: 1rem;
+}
+.card .card__details__rating {
   display: flex;
+  align-items: center;
+}
+.card .card__actions {
+  margin-top: -1rem !important;
+}
+
+.cards {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   gap: 1rem;
 }
 
-#signin-page {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  gap: 5rem;
-  overflow: hidden;
-}
 
-#signin-section {
-  padding: 1rem 5rem;
-  margin-bottom: 7rem;
-  padding-top: 5rem;
-  min-width: 100%;
   background-color: var(--primary-background);
   border: 0.1rem solid lightgrey;
   border-radius: 1rem;

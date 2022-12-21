@@ -1,0 +1,19 @@
+.card {
+    width: 30rem;
+    border-radius: 20px !important;
+    margin: 2rem;
+    border: none !important;
+    .card__details {
+        margin-top: 0.5rem;
+        &:last-of-type {
+            margin-top: 1rem;
+        }
+        &__rating {
+            display: flex;
+            align-items: center;
+        }
+    }
+    .card__actions {
+        margin-top: -1rem !important;
+    }
+}
