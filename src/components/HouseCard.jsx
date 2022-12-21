@@ -44,7 +44,7 @@ export default function HouseCard({ house }) {
 
     return (
         <div key={id}>
-            <Card sx={{ maxWidth: 345 }} variant="outlined">
+            <Card sx={{ maxWidth: 345 }} variant="outlined" className="card">
                 <CardMedia
                     component="img"
                     height="194"
