@@ -18,8 +18,6 @@ export default function HouseCard({ house }) {
     const { first, second, third } = images;
     const { fourth, fifth, sixth } = images;
 
-    const [expanded, setExpanded] = React.useState(false);
-
     return (
         <div key={id}>
             <Card sx={{ maxWidth: 345 }} variant="outlined" className="card">
