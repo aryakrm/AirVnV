@@ -1,7 +1,8 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
-import { Button } from '@mui/material';
+import { Button, TextField } from '@mui/material';
+import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 
 {
     /* <Button variant="contained">Contained</Button>
@@ -14,78 +15,78 @@ import { Button } from '@mui/material';
 }
 
 function SignIn() {
-    const country = useRef('');
-    const email = useRef('');
-    const form = useRef(0);
+    const [country, setCountry] = useState('');
+    const formRef = useRef();
+
+    const handleCountryChange = (e) => {
+        setCountry(e.target.value);
+    };
+
     return (
-        <main>
+        <div id="signin-page">
             <Nav />
-            <section className="signin-wrapper">
-                <form className="signin-wrapper-form" action="" ref={form}>
-                    <span className="signin-form__header">Login</span>
-                    <label htmlFor="country">Welcome to AirVnV</label>
-                    <select
-                        name="country"
-                        className="signin-form__country"
-                        ref={country}
-                    >
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                    </select>
-                    <input
-                        name="email"
-                        type="email"
-                        ref={email}
-                        className="signin-form__email"
-                    />
-                    <Button variant="contained" size="large">
-                        Continue
-                    </Button>
-                    <span>or</span>
-                    <Button
-                        className="signin-form__faceBook"
-                        variant="contained"
-                        size="large"
-                    >
-                        Login with FaceBook
-                    </Button>
-                    <Button
-                        className="signin-form__faceBook"
-                        variant="outlined"
-                        size="large"
-                    >
-                        Login with Google
-                    </Button>
-                    <Button
-                        className="signin-form__faceBook"
-                        variant="outlined"
-                        size="large"
-                    >
-                        Login with Apple
-                    </Button>
-                </form>
-            </section>
+            <main>
+                <section id="signin-section">
+                    <h3 id="signin-section__header">Login</h3>
+                    <h2 id="signin-section__header2">Welcome to AirVnV</h2>
+                    <form id="signin-section-form" action="" ref={formRef}>
+                        <FormControl fullWidth>
+                            <InputLabel id="demo-simple-select-label">
+                                Country
+                            </InputLabel>
+                            <Select
+                                labelId="demo-simple-select-label"
+                                id="demo-simple-select"
+                                value={'put Value here'}
+                                label="Country"
+                            >
+                                <MenuItem value={'USA'}>USA</MenuItem>
+                                <MenuItem value={'Germany'}>Germany</MenuItem>
+                                <MenuItem value={'Romania'}>Romania</MenuItem>
+                            </Select>
+                        </FormControl>
+                        <TextField
+                            fullWidth
+                            id="outlined-basic signin-section-form__email fullWidth"
+                            label="Email"
+                            variant="outlined"
+                        />
+                        <Button
+                            variant="contained"
+                            size="large"
+                            id="signin-section-form__continue"
+                        >
+                            Continue
+                        </Button>
+                        <div id="signin-section-form__btns">
+                            <span>or</span>
+                            <Button
+                                id="signin-section-form__btns__faceBook"
+                                variant="outlined"
+                                size="large"
+                            >
+                                Login with FaceBook
+                            </Button>
+                            <Button
+                                id="signin-section-form__btns__google"
+                                variant="outlined"
+                                size="large"
+                            >
+                                Login with Google
+                            </Button>
+                            <Button
+                                id="signin-section-form__btns__apple"
+                                variant="outlined"
+                                size="large"
+                            >
+                                Login with Apple
+                            </Button>
+                        </div>
+                    </form>
+                </section>
+            </main>
             <Footer />
-        </main>
+        </div>
     );
 }
 

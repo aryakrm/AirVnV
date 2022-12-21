@@ -1,37 +1,83 @@
 @use './colors' as colors;
 
-.signin-wrapper {
-    max-width: 100rem;
-    background-color: colors.$primary_background;
+#signin-page {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
     flex-direction: column;
+    gap: 5rem;
+    overflow: hidden;
+}
+
+#signin-section {
+    padding: 1rem 5rem;
+    padding-top: 5rem;
+    min-width: 100%;
+    background-color: colors.$primary_background;
+    border: 0.1rem solid lightgrey;
+    border-radius: 1rem;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 1rem;
+
+    &__header {
+        position: absolute;
+        top: 1.5rem;
+        color: colors.$primary_text;
+        align-self: center;
+    }
+
+    &__header2 {
+        color: colors.$primary_text;
+        margin-bottom: 1rem;
+        align-self: flex-start;
+    }
+
     &-form {
         display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
-        &__header {
-        }
+        align-items: center;
+        gap: 2rem;
 
         &__country {
+            color: colors.$primary_text;
         }
 
         &__email {
-            padding: 0.5rem;
+            color: colors.$primary_text;
         }
 
-        &__faceBook {
-            padding: 2rem;
+        &__continue {
+            padding: 1rem 8rem;
+            background-color: colors.$primary_button;
+            color: colors.$primary_text;
+            align-self: stretch;
         }
+        &__btns {
+            display: flex;
+            align-self: stretch;
+            flex-direction: column;
+            gap: 2rem;
+            span {
+                align-self: center;
+            }
+            &__faceBook {
+                padding: 1rem 5rem;
+                border: 2px solid colors.$primary_button;
+                color: colors.$primary_text;
+            }
 
-        &__google {
-            padding: 2rem;
-        }
+            &__google {
+                padding: 1rem 5rem;
+                border: 2px solid colors.$primary_button;
+                color: colors.$primary_text;
+            }
 
-        &__apple {
-            padding: 2rem;
+            &__apple {
+                padding: 1rem 5rem;
+                border: 2px solid colors.$primary_button;
+                color: colors.$primary_text;
+            }
         }
     }
 }
