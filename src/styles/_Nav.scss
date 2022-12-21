@@ -1,34 +1,92 @@
 @use './colors' as colors;
 
 nav {
-    width: 100vw;
-    height: 10rem;
+    .top_nav_menu {
+        width: 100vw;
+        height: 7.5rem;
+        color: colors.$primary_text;
+        display: none;
+        justify-content: space-around;
+        align-items: center;
+        border-bottom: 0.5px solid lightgrey;
+        padding: 3rem;
+        .logo {
+            width: 18rem;
+        }
+        .nav_filter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1.5rem;
+            background-color: colors.$primary_background;
+            border-radius: 30px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            span {
+                &:hover {
+                    cursor: pointer;
+                    color: colors.$primary_text;
+                }
+            }
+            button {
+                background: none;
+                border: none;
+                border-radius: 50%;
+            }
+        }
+        .nav_menu {
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            font-size: 2rem;
+        }
+        a {
+            padding: 2rem;
+            border-radius: 10px;
+            &:hover {
+                color: colors.$primary_background;
+            }
+        }
+    }
+}
+.button_nav_menu {
+    position: fixed;
+    bottom: 0;
+    // background-color: colors.$primary_background;
     background-color: colors.$primary_background;
+    width: 100vw;
+    height: 7.5rem;
+    border-top: 0.5px solid lightgrey;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: colors.$primary_text;
-    .logo {
-        width: 18rem;
-        display: none;
+    z-index: 3;
+    gap: 20%;
+    a {
+        padding: 2rem;
+        border-radius: 10px;
+        &:hover {
+            background-color: colors.$primary_header;
+            color: colors.$primary_background;
+        }
     }
-    .nav_menu {
-        display: none;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        font-size: 2rem;
+}
+
+@media only screen and (min-width: '600px') {
+    nav {
+        .top_nav_menu {
+            display: flex;
+            background-color: colors.$primary_header;
+            .logo {
+                display: block;
+            }
+            .nav_menu {
+                display: flex;
+            }
+        }
     }
     .button_nav_menu {
-        position: fixed;
-        bottom: 0;
-        // background-color: colors.$primary_background;
-        background-color: red;
-        width: 100vw;
-        height: 7.5rem;
-        border-top: 0.5px solid lightgrey;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: none;
     }
 }

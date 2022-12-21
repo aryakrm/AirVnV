@@ -2,9 +2,9 @@ import React from 'react';
 import Nav from '../components/Nav';
 function SignUp() {
     return (
-        <div>
+        <main>
             <Nav />
-        </div>
+        </main>
     );
 }
 

@@ -8,14 +8,14 @@ function Home() {
     const houses = useStoreHouses((state) => state.houses);
     console.log(houses);
     return (
-        <div>
+        <main>
             <Nav />
             <section className="cards">
                 {houses.map((house) => {
                     return <HouseCard key={house.id} house={house} />;
                 })}
             </section>
-        </div>
+        </main>
     );
 }
 

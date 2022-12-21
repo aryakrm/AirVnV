@@ -1,52 +1,50 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import BottomNavigation from '@mui/material/BottomNavigation';
-import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import FolderIcon from '@mui/icons-material/Folder';
-import RestoreIcon from '@mui/icons-material/Restore';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+import SearchIcon from '@mui/icons-material/Search';
+import HomeIcon from '@mui/icons-material/Home';
+import LoginIcon from '@mui/icons-material/Login';
+import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt';
 
 function Nav() {
-    const [value, setValue] = React.useState('recents');
-
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
     return (
-        <nav>
-            <img className="logo" src="../../public/airvnv-logo.png" alt="" />
-            <div className="nav_menu">
-                <Link to={'/'}>Home</Link>
-                <Link to={'/signin'}>SignIn</Link>
-                <Link to={'/signup'}>SignUp</Link>
-            </div>
-
+        <div>
+            <nav>
+                <div className="top_nav_menu">
+                    <Link to={'/'}>
+                        <img
+                            className="logo"
+                            src="../../public/airvnv-logo.png"
+                            alt=""
+                        />
+                    </Link>
+                    <div className="nav_filter">
+                        <span>Anywhere</span>
+                        <span>| Any week</span>
+                        <span>| add guests</span>
+                        <button>
+                            <SearchIcon fontSize="large" />
+                        </button>
+                    </div>
+                    <div className="nav_menu">
+                        <Link to={'/'}>Home</Link>
+                        <Link to={'/signin'}>SignIn</Link>
+                        <Link to={'/signup'}>SignUp</Link>
+                    </div>
+                </div>
+            </nav>
             <div className="button_nav_menu">
-                <BottomNavigation
-                    sx={{ width: '100%', height: '100%' }}
-                    value={value}
-                    onChange={handleChange}
-                >
-                    <BottomNavigationAction
-                        label="Recents"
-                        value="recents"
-                        icon={<RestoreIcon />}
-                    />
-                    <BottomNavigationAction
-                        label="Favorites"
-                        value="favorites"
-                        icon={<FavoriteIcon />}
-                    />
-                    <BottomNavigationAction
-                        label="Nearby"
-                        value="nearby"
-                        fontSize="larger"
-                        icon={<LocationOnIcon />}
-                    />
-                </BottomNavigation>
+                <Link to={'/'}>
+                    <HomeIcon fontSize="large" />
+                </Link>
+                <Link to={'/signin'}>
+                    <LoginIcon fontSize="large" />
+                </Link>
+
+                <Link to={'/signup'}>
+                    <PersonAddAltIcon fontSize="large" />
+                </Link>
             </div>
-        </nav>
+        </div>
     );
 }
 

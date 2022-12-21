@@ -1,0 +1,37 @@
+@use './colors' as colors;
+
+.signin-wrapper {
+    max-width: 100rem;
+    background-color: colors.$primary_background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &__header {
+        }
+
+        &__country {
+        }
+
+        &__email {
+            padding: 0.5rem;
+        }
+
+        &__faceBook {
+            padding: 2rem;
+        }
+
+        &__google {
+            padding: 2rem;
+        }
+
+        &__apple {
+            padding: 2rem;
+        }
+    }
+}
