@@ -75,7 +75,8 @@ nav .top_nav_menu .nav_menu {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 nav .top_nav_menu a {
   padding: 2rem;
