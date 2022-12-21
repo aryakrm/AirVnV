@@ -1,0 +1,121 @@
+@use './colors' as colors;
+
+#signup-page {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 1rem 0;
+}
+
+#signup-section {
+    position: relative;
+    padding: 1rem 5rem;
+    margin-bottom: 8rem;
+    padding-top: 5rem;
+    min-width: 100%;
+    background-color: colors.$primary_background;
+    border-top: 0.1rem solid lightgrey;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 1rem;
+    &__header {
+        margin: 1rem;
+        position: absolute;
+        top: -4rem;
+        color: colors.$primary_text;
+        align-self: center;
+    }
+
+    &__header2 {
+        color: colors.$primary_text;
+        margin-bottom: 1rem;
+        align-self: flex-start;
+    }
+
+    &-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        &__country {
+            color: colors.$primary_text;
+        }
+
+        &__email {
+            color: colors.$primary_text;
+            &:focus {
+                border-color: red;
+            }
+        }
+
+        &__continue {
+            padding: 1rem 8rem;
+            background-color: colors.$primary_button;
+            color: colors.$primary_text;
+            align-self: stretch;
+        }
+        &__btns {
+            display: flex;
+            align-self: stretch;
+            flex-direction: column;
+            gap: 2rem;
+
+            &__span {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                &__line {
+                    flex-grow: 1;
+                    border-bottom: 1px solid lightgrey;
+                    height: 1px;
+                }
+            }
+            &__faceBook {
+                padding: 1rem;
+                border: 2px solid colors.$primary_button;
+                color: colors.$primary_text;
+            }
+
+            &__google {
+                padding: 1rem;
+                border: 2px solid colors.$primary_button;
+                color: colors.$primary_text;
+            }
+
+            &__apple {
+                padding: 1rem;
+                border: 2px solid colors.$primary_button;
+                color: colors.$primary_text;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: '743px') {
+    #signup-page {
+        align-items: center;
+        padding: 0;
+        #signup-section {
+            padding-bottom: 5rem;
+            border: 0.1rem solid lightgrey;
+            align-items: center;
+
+            &__header {
+                position: static;
+                align-self: center;
+                color: colors.$primary_text;
+                align-self: center;
+            }
+
+            &__header2 {
+                align-self: center;
+            }
+
+            &-form {
+                width: 50rem;
+            }
+        }
+    }
+}

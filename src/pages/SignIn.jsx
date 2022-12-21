@@ -1,18 +1,7 @@
 import React, { useRef, useState } from 'react';
 import Nav from '../components/Nav';
-import Footer from '../components/Footer';
 import { Button, TextField } from '@mui/material';
 import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
-
-{
-    /* <Button variant="contained">Contained</Button>
-<Button variant="contained" disabled>
-  Disabled
-</Button>
-<Button variant="contained" href="#contained-buttons">
-  Link
-</Button> */
-}
 
 function SignIn() {
     const [country, setCountry] = useState('');
@@ -28,7 +17,7 @@ function SignIn() {
             <main>
                 <section id="signin-section">
                     <h3 id="signin-section__header">Login</h3>
-                    <h2 id="signin-section__header2">Welcome to AirVnV</h2>
+                    <h2 id="signin-section__header2">Welcome Back!!</h2>
                     <form id="signin-section-form" action="" ref={formRef}>
                         <FormControl fullWidth>
                             <InputLabel id="demo-simple-select-label">
@@ -59,7 +48,11 @@ function SignIn() {
                             Continue
                         </Button>
                         <div id="signin-section-form__btns">
-                            <span>or</span>
+                            <span id="signin-section-form__btns__span">
+                                <span id="signin-section-form__btns__span__line"></span>
+                                or
+                                <span id="signin-section-form__btns__span__line"></span>
+                            </span>
                             <Button
                                 id="signin-section-form__btns__faceBook"
                                 variant="outlined"
