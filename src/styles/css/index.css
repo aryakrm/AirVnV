@@ -56,20 +56,18 @@ nav .top_nav_menu .nav_filter {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  padding: 1.5rem;
   background-color: var(--primary-background);
   border-radius: 30px;
   font-size: 1.3rem;
   font-weight: 600;
+  margin-left: 10rem;
+}
+nav .top_nav_menu .nav_filter span {
+  padding: 1.5rem;
 }
 nav .top_nav_menu .nav_filter span:hover {
   cursor: pointer;
   color: var(--primary-text);
-}
-nav .top_nav_menu .nav_filter button {
-  background: none;
-  border: none;
-  border-radius: 50%;
 }
 nav .top_nav_menu .nav_menu {
   justify-content: center;
@@ -84,6 +82,49 @@ nav .top_nav_menu a {
 }
 nav .top_nav_menu a:hover {
   color: var(--primary-background);
+}
+
+.filter__box__wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.filter__box__wrapper .filter__box__location {
+  padding: 3rem 9rem;
+  background-color: var(--primary-text);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--primary-background);
+  transition: all 0.3s;
+  position: fixed;
+  top: 75px;
+}
+.filter__box__wrapper .filter__box__date {
+  padding: 4rem 9rem;
+  background-color: var(--primary-text);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--primary-background);
+  transition: all 0.3s;
+  position: fixed;
+  top: 75px;
+}
+.filter__box__wrapper .filter__box__guests {
+  padding: 4rem 9rem;
+  background-color: var(--primary-text);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--primary-background);
+  transition: all 0.3s;
+  position: fixed;
+  top: 75px;
 }
 
 .button_nav_menu {
