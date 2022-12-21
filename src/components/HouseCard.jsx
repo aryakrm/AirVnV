@@ -23,7 +23,7 @@ export default function HouseCard({ house }) {
             <Card sx={{ maxWidth: 345 }} variant="outlined" className="card">
                 <CardMedia
                     component="img"
-                    height="194"
+                    height="300"
                     image={first}
                     alt={name}
                 />
