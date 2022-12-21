@@ -8,11 +8,11 @@ const AppRoutes = [
         element: <Home />,
     },
     {
-        path: '',
+        path: 'signup',
         element: <SignUp />,
     },
     {
-        path: 'contact',
+        path: 'signin',
         element: <SignIn />,
     },
 ];

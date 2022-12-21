@@ -1,48 +1,6 @@
 import { nanoid } from 'nanoid';
 import create from 'zustand';
-
-const INIT_HOUSES = [
-    {
-        id: nanoid(),
-        name: '',
-        price: 1000,
-        location: '',
-        rate: 5,
-        images: [],
-        timeStamp: Date.now(),
-        startDate: '',
-        endDate: '',
-        owner: {
-            id: nanoid(),
-            name: '',
-            avatar: '',
-        },
-        details: {
-            guests: 0,
-            bedrooms: 0,
-            beds: 0,
-            baths: 0,
-        },
-        offers: {
-            wifi: false,
-            kitchen: false,
-            parking: false,
-            pets: false,
-            tv: false,
-            pool: false,
-            smoke: false,
-        },
-        reviews: [
-            {
-                id: nanoid(),
-                avatar: '',
-                user: '',
-                content: '',
-            },
-        ],
-        isEdited: false,
-    },
-];
+import { INIT_HOUSES } from './initStoreHouses';
 
 // price convert
 // const convertPrice = (priceInUSD, option)  => {
@@ -93,3 +51,5 @@ const useStoreHouses = create((set) => ({
 //     const count = useStore((state) => state.count);
 //     return <h1>{count}</h1>;
 // }
+
+export { useStoreHouses };
