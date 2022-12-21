@@ -173,6 +173,20 @@ nav .top_nav_menu a:hover {
   width: 30rem;
   border-radius: 20px !important;
   margin: 2rem;
+  border: none !important;
+}
+.card .card__details {
+  margin-top: 0.5rem;
+}
+.card .card__details:last-of-type {
+  margin-top: 1rem;
+}
+.card .card__details__rating {
+  display: flex;
+  align-items: center;
+}
+.card .card__actions {
+  margin-top: -1rem !important;
 }
 
 .cards {
