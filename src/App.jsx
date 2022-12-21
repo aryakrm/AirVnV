@@ -1,11 +1,16 @@
-import "./App.css";
+import React from 'react';
+import { createBrowserRouter } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
+import AppRoutes from './AppRoutes';
+
+const routers = createBrowserRouter(AppRoutes);
 
 function App() {
-  return (
-    <div className="App">
-      <h1>This is AirVnV</h1>
-    </div>
-  );
+    return (
+        <React.StrictMode>
+            <RouterProvider router={routers}></RouterProvider>
+        </React.StrictMode>
+    );
 }
 
 export default App;
