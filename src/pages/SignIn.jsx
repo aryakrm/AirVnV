@@ -47,7 +47,7 @@ function SignIn() {
                         </FormControl>
                         <TextField
                             fullWidth
-                            id="outlined-basic signin-section-form__email fullWidth"
+                            id="signin-section-form__email"
                             label="Email"
                             variant="outlined"
                         />
@@ -85,7 +85,6 @@ function SignIn() {
                     </form>
                 </section>
             </main>
-            <Footer />
         </div>
     );
 }

@@ -154,6 +154,7 @@ nav .top_nav_menu a:hover {
 
 #signin-section {
   padding: 1rem 5rem;
+  margin-bottom: 7rem;
   padding-top: 5rem;
   min-width: 100%;
   background-color: var(--primary-background);
@@ -186,6 +187,9 @@ nav .top_nav_menu a:hover {
 }
 #signin-section-form__email {
   color: var(--primary-text);
+}
+#signin-section-form__email:focus {
+  border-color: red;
 }
 #signin-section-form__continue {
   padding: 1rem 8rem;

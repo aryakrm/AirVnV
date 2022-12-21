@@ -10,6 +10,7 @@
 
 #signin-section {
     padding: 1rem 5rem;
+    margin-bottom: 7rem;
     padding-top: 5rem;
     min-width: 100%;
     background-color: colors.$primary_background;
@@ -45,6 +46,9 @@
 
         &__email {
             color: colors.$primary_text;
+            &:focus {
+                border-color: red;
+            }
         }
 
         &__continue {
