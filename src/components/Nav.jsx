@@ -37,7 +37,7 @@ function Nav() {
                         <img
                             className="logo"
                             src="../../public/airvnv-logo.png"
-                            alt=""
+                            alt="AirVnV Logo"
                         />
                     </Link>
                     <div className="nav_filter">
