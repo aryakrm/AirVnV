@@ -90,7 +90,7 @@ function Nav() {
                     <Link to={'/'}>
                         <img
                             className="logo"
-                            src="../../public/airvnv-logo.png"
+                            src="./src/assets/logo.png"
                             alt="AirVnV Logo"
                         />
                     </Link>
