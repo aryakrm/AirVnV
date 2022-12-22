@@ -6,13 +6,16 @@ body {
   font-size: 16px;
 }
 
+#root {
+  overflow: hidden;
+}
+
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  overflow: hidden;
 }
 
 * {
@@ -218,28 +221,28 @@ nav .top_nav_menu a:hover {
 }
 #signin-page {
   display: flex;
-  position: relative;
   flex-direction: column;
-  gap: 5rem;
-  overflow: hidden;
+  gap: 3rem;
+  padding: 1rem 0;
 }
 
 #signin-section {
+  position: relative;
   padding: 1rem 5rem;
-  margin-bottom: 7rem;
+  margin-bottom: 8rem;
   padding-top: 5rem;
   min-width: 100%;
   background-color: var(--primary-background);
-  border: 0.1rem solid lightgrey;
-  border-radius: 1rem;
+  border-top: 0.1rem solid lightgrey;
   display: flex;
   align-items: stretch;
   flex-direction: column;
   gap: 1rem;
 }
 #signin-section__header {
+  margin: 1rem;
   position: absolute;
-  top: 1.5rem;
+  top: -4rem;
   color: var(--primary-text);
   align-self: center;
 }
@@ -275,23 +278,162 @@ nav .top_nav_menu a:hover {
   flex-direction: column;
   gap: 2rem;
 }
-#signin-section-form__btns span {
-  align-self: center;
+#signin-section-form__btns__span {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+#signin-section-form__btns__span__line {
+  flex-grow: 1;
+  border-bottom: 1px solid lightgrey;
+  height: 1px;
 }
 #signin-section-form__btns__faceBook {
-  padding: 1rem 5rem;
+  padding: 1rem;
   border: 2px solid var(--primary-button);
   color: var(--primary-text);
 }
 #signin-section-form__btns__google {
-  padding: 1rem 5rem;
+  padding: 1rem;
   border: 2px solid var(--primary-button);
   color: var(--primary-text);
 }
 #signin-section-form__btns__apple {
-  padding: 1rem 5rem;
+  padding: 1rem;
   border: 2px solid var(--primary-button);
   color: var(--primary-text);
+}
+
+@media only screen and (min-width: 743px) {
+  #signin-page {
+    align-items: center;
+    padding: 0;
+  }
+  #signin-page #signin-section {
+    padding-bottom: 5rem;
+    border: 0.1rem solid lightgrey;
+    align-items: center;
+  }
+  #signin-page #signin-section__header {
+    position: static;
+    align-self: center;
+    color: var(--primary-text);
+    align-self: center;
+  }
+  #signin-page #signin-section__header2 {
+    align-self: center;
+  }
+  #signin-page #signin-section-form {
+    width: 50rem;
+  }
+}
+#signup-page {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 1rem 0;
+}
+
+#signup-section {
+  position: relative;
+  padding: 1rem 5rem;
+  margin-bottom: 8rem;
+  padding-top: 5rem;
+  min-width: 100%;
+  background-color: var(--primary-background);
+  border-top: 0.1rem solid lightgrey;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 1rem;
+}
+#signup-section__header {
+  margin: 1rem;
+  position: absolute;
+  top: -4rem;
+  color: var(--primary-text);
+  align-self: center;
+}
+#signup-section__header2 {
+  color: var(--primary-text);
+  margin-bottom: 1rem;
+  align-self: flex-start;
+}
+#signup-section-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+#signup-section-form__country {
+  color: var(--primary-text);
+}
+#signup-section-form__email {
+  color: var(--primary-text);
+}
+#signup-section-form__email:focus {
+  border-color: red;
+}
+#signup-section-form__continue {
+  padding: 1rem 8rem;
+  background-color: var(--primary-button);
+  color: var(--primary-text);
+  align-self: stretch;
+}
+#signup-section-form__btns {
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+  gap: 2rem;
+}
+#signup-section-form__btns__span {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+#signup-section-form__btns__span__line {
+  flex-grow: 1;
+  border-bottom: 1px solid lightgrey;
+  height: 1px;
+}
+#signup-section-form__btns__faceBook {
+  padding: 1rem;
+  border: 2px solid var(--primary-button);
+  color: var(--primary-text);
+}
+#signup-section-form__btns__google {
+  padding: 1rem;
+  border: 2px solid var(--primary-button);
+  color: var(--primary-text);
+}
+#signup-section-form__btns__apple {
+  padding: 1rem;
+  border: 2px solid var(--primary-button);
+  color: var(--primary-text);
+}
+
+@media only screen and (min-width: 743px) {
+  #signup-page {
+    align-items: center;
+    padding: 0;
+  }
+  #signup-page #signup-section {
+    padding-bottom: 5rem;
+    border: 0.1rem solid lightgrey;
+    align-items: center;
+  }
+  #signup-page #signup-section__header {
+    position: static;
+    align-self: center;
+    color: var(--primary-text);
+    align-self: center;
+  }
+  #signup-page #signup-section__header2 {
+    align-self: center;
+  }
+  #signup-page #signup-section-form {
+    width: 50rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

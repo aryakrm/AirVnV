@@ -6,13 +6,16 @@ body {
     font-size: 16px;
 }
 
+#root {
+    overflow: hidden;
+}
+
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    overflow: hidden;
 }
 
 * {
