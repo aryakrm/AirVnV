@@ -1,13 +1,9 @@
 .cards {
+    width: 100vw;
     padding: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid: auto-flow 60rem / repeat(auto-fit, minmax(35rem, 35rem));
+    justify-content: space-evenly;
+    justify-items: center;
     align-items: center;
-    gap: 1rem;
-}
-@media only screen and (min-width: '1080px') {
-    .cards {
-        justify-content: flex-start;
-    }
 }
