@@ -10,14 +10,6 @@ body {
   overflow: hidden;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -207,18 +199,13 @@ nav .top_nav_menu a:hover {
 
 .cards {
   padding: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid: auto-flow 60rem/repeat(auto-fit, minmax(35rem, 35rem));
+  justify-content: space-evenly;
+  justify-items: center;
   align-items: center;
-  gap: 1rem;
 }
 
-@media only screen and (min-width: 1080px) {
-  .cards {
-    justify-content: flex-start;
-  }
-}
 #signin-page {
   display: flex;
   flex-direction: column;
