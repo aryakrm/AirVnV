@@ -13,9 +13,18 @@ import { INIT_PROPERITES } from './initStoreproperties';
 
 const useStoreProperties = create((set) => ({
     properties: INIT_PROPERITES,
-    addProperty: (newproperty) => {
+    newPropertySpecs: {},
+    addProperty: (newProperty) => {
         return set((state) => ({
-            properties: [...state.properties, newproperty],
+            properties: [...state.properties, newProperty],
+        }));
+    },
+    addPropertySpecs: (key, newPropertySpec) => {
+        return set((state) => ({
+            newPropertySpecs: {
+                ...state.newPropertySpecs,
+                [key]: newPropertySpec,
+            },
         }));
     },
     deleteProperty: (propertyId) => {
@@ -36,7 +45,7 @@ const useStoreProperties = create((set) => ({
         return set((state) => ({
             properties: state.properties.map((property) =>
                 property.id === propertyId
-                    ? { ...property, ...editedproperty }
+                    ? { ...property, ...editedProperty }
                     : property
             ),
         }));

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useStoreProperties } from '../state/store';
 // number 2
 // id
 // type
@@ -8,6 +9,14 @@ import { Link } from 'react-router-dom';
 function AddType() {
     const [property, setProperty] = useState({});
     const [type, setType] = useState('');
+
+    const addPropertySpecs = useStoreProperties(
+        (state) => state.addPropertySpecs
+    );
+
+    useEffect(() => {
+        addPropertySpecs('type', type);
+    }, [type]);
 
     const handleRadioChange = (e) => {
         setType(e.target.value);
@@ -51,7 +60,7 @@ function AddType() {
 
             <button>Save</button>
 
-            <Link to={`/add-property/add-location/${property}`}>Next</Link>
+            <Link to={`/add-property/add-location`}>Next</Link>
         </div>
     );
 }

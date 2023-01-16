@@ -8,7 +8,7 @@ function AddPrice() {
             <input type="number" />
             <span>$</span>
 
-            <Link>
+            <Link to={'/add-property/review'}>
                 <button>Next</button>
             </Link>
         </div>
