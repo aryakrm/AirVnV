@@ -4,10 +4,11 @@ import { nanoid } from 'nanoid';
 // const toUnix = (date) => new Date(date).getTime();
 // const fromUnix = (unix) => new Date(unix);
 
-const INIT_HOUSES = [
+const INIT_PROPERITES = [
     {
         id: nanoid(),
-        name: 'Villa',
+        title: 'someTitle',
+        type: 'House',
         price: 500,
         location: {
             city: 'Ibiza',
@@ -54,7 +55,9 @@ const INIT_HOUSES = [
     },
     {
         id: nanoid(),
-        name: 'Villa',
+
+        title: 'someTitle',
+        type: 'House',
         price: 500,
         location: {
             city: 'Berlin',
@@ -101,7 +104,8 @@ const INIT_HOUSES = [
     },
     {
         id: nanoid(),
-        name: 'Tiny Home',
+        title: 'Some title',
+        type: 'House',
         price: 40,
         location: {
             city: 'New York',
@@ -148,7 +152,9 @@ const INIT_HOUSES = [
     },
     {
         id: nanoid(),
-        name: 'Home',
+
+        title: 'someTitle',
+        type: 'House',
         price: 40,
         location: {
             city: 'London',
@@ -195,7 +201,8 @@ const INIT_HOUSES = [
     },
     {
         id: nanoid(),
-        name: 'Fantastic Home',
+        title: 'some title',
+        type: 'House',
         price: 40,
         location: {
             city: 'Milan',
@@ -242,7 +249,8 @@ const INIT_HOUSES = [
     },
     {
         id: nanoid(),
-        name: 'Great House',
+        title: 'someTitle',
+        type: 'House',
         price: 40,
         location: {
             city: 'Melbourne',
@@ -289,7 +297,8 @@ const INIT_HOUSES = [
     },
     {
         id: nanoid(),
-        name: 'Great House',
+        title: 'some title',
+        type: 'House',
         price: 40,
         location: {
             city: 'Melbourne',
@@ -336,7 +345,8 @@ const INIT_HOUSES = [
     },
     {
         id: nanoid(),
-        name: 'Great House',
+        title: 'some title',
+        type: 'House',
         price: 40,
         location: {
             city: 'Melbourne',
@@ -383,4 +393,4 @@ const INIT_HOUSES = [
     },
 ];
 
-export { INIT_HOUSES };
+export { INIT_PROPERITES };

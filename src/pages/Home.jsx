@@ -1,18 +1,19 @@
 import React from 'react';
-import { useStoreHouses } from '../state/store';
+import { useStoreProperties } from '../state/store';
 import Nav from '../components/Nav';
-
-import HouseCard from '../components/HouseCard';
+import PropertyCard from '../components/PropertyCard';
 
 function Home() {
-    const houses = useStoreHouses((state) => state.houses);
-    console.log(houses);
+    const properties = useStoreProperties((state) => state.properties);
+    console.log(properties);
     return (
         <main>
             <Nav />
             <section className="cards">
-                {houses.map((house) => {
-                    return <HouseCard key={house.id} house={house} />;
+                {properties.map((property) => {
+                    return (
+                        <PropertyCard key={property.id} property={property} />
+                    );
                 })}
             </section>
         </main>

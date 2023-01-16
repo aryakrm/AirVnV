@@ -10,10 +10,10 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import StarIcon from '@mui/icons-material/Star';
 
-export default function HouseCard({ house }) {
-    const { id, name } = house;
-    const { price, location, rating } = house;
-    const { images, startDate, endDate } = house;
+export default function PropertyCard({ property }) {
+    const { id, type } = property;
+    const { price, location, rating } = property;
+    const { images, startDate, endDate } = property;
     const { city, country } = location;
     const { first, second, third } = images;
     const { fourth, fifth, sixth } = images;
@@ -25,12 +25,12 @@ export default function HouseCard({ house }) {
                     component="img"
                     height="300"
                     image={first}
-                    alt={name}
+                    alt={type}
                 />
 
                 <CardContent>
                     <Typography variant="h3" color="text.secondary">
-                        {name}
+                        {type}
                     </Typography>
                     <Typography
                         variant="h5"

@@ -1,5 +1,5 @@
 import create from 'zustand';
-import { INIT_HOUSES } from './initStoreHouses';
+import { INIT_PROPERITES } from './initStoreproperties';
 
 // price convert
 // const convertPrice = (priceInUSD, option)  => {
@@ -11,39 +11,41 @@ import { INIT_HOUSES } from './initStoreHouses';
 //     return CURRENCIES[option] * priceInUSD
 // }
 
-const useStoreHouses = create((set) => ({
-    houses: INIT_HOUSES,
-    addHouse: (newHouse) => {
+const useStoreProperties = create((set) => ({
+    properties: INIT_PROPERITES,
+    addProperty: (newproperty) => {
         return set((state) => ({
-            houses: [...state.houses, newHouse],
+            properties: [...state.properties, newproperty],
         }));
     },
-    deleteHouse: (houseId) => {
+    deleteProperty: (propertyId) => {
         return set((state) => ({
-            houses: state.houses.filter(({ id }) => id !== houseId),
+            properties: state.properties.filter(({ id }) => id !== propertyId),
         }));
     },
-    toggleIsEdited: (houseId) => {
+    toggleIsEdited: (propertyId) => {
         return set((state) => ({
-            houses: state.houses.map((house) =>
-                house.id === houseId
-                    ? { ...house, isEdited: !house.isEdited }
-                    : house
+            properties: state.properties.map((property) =>
+                property.id === propertyId
+                    ? { ...property, isEdited: !property.isEdited }
+                    : property
             ),
         }));
     },
-    editHouse: (houseId, editedHouse) => {
+    editProperty: (propertyId, editedProperty) => {
         return set((state) => ({
-            houses: state.houses.map((house) =>
-                house.id === houseId ? { ...house, ...editedHouse } : house
+            properties: state.properties.map((property) =>
+                property.id === propertyId
+                    ? { ...property, ...editedproperty }
+                    : property
             ),
         }));
     },
 }));
 
 // function Controls() {
-//     const addHouse = useStore((state) => state.addHouse);
-//     return <button onClick={() => addHouse(newHouse)}>Add House</button>;
+//     const addproperty = useStore((state) => state.addproperty);
+//     return <button onClick={() => addproperty(newproperty)}>Add property</button>;
 // }
 
 // function Counter() {
@@ -51,4 +53,4 @@ const useStoreHouses = create((set) => ({
 //     return <h1>{count}</h1>;
 // }
 
-export { useStoreHouses };
+export { useStoreProperties };
