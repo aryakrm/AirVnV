@@ -198,6 +198,7 @@ nav .top_nav_menu a:hover {
 }
 
 .cards {
+  width: 100vw;
   padding: 2rem;
   display: grid;
   grid: auto-flow 60rem/repeat(auto-fit, minmax(35rem, 35rem));

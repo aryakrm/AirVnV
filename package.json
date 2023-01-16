@@ -22,6 +22,7 @@
         "eslint": "^8.30.0",
         "figlet": "^1.5.2",
         "firebase": "^9.15.0",
+        "framer-motion": "^8.0.2",
         "mongodb": "^4.13.0",
         "nanoid": "^4.0.0",
         "passport-appleid": "^1.0.5",
