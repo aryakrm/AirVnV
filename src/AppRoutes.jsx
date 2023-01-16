@@ -1,7 +1,7 @@
 import Home from './pages/Home';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
-import AddProperty from './pages/AddProprety';
+import AddProperty from './pages/AddProperty';
 import AddAboutYourPlace from './components/AddAboutYourPlace';
 import AddType from './components/AddType';
 import AddLocation from './components/AddLocation';
@@ -40,7 +40,7 @@ const AppRoutes = [
         element: <AddType />,
     },
     {
-        path: 'add-property/add-location/:type',
+        path: 'add-property/add-location',
         element: <AddLocation />,
     },
     {

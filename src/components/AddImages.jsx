@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 // number 6
 function AddImages() {
     return (
@@ -15,6 +16,9 @@ function AddImages() {
             <input type="image" />
 
             <button>Add Photos</button>
+            <Link to={'/add-property/add-offers'}>
+                <button>Next</button>
+            </Link>
         </div>
     );
 }

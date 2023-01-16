@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 // number 7
 function AddOffers() {
     return (
@@ -20,6 +21,9 @@ function AddOffers() {
             <label>Smoke:</label>
             <input type="checkbox" />
             <button>Apply</button>
+            <Link to={'/add-property/add-price'}>
+                <button>Next</button>
+            </Link>
         </div>
     );
 }

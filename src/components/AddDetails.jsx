@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 // number 5
 function addDetails() {
     return (
@@ -13,7 +14,7 @@ function addDetails() {
             <label>Baths:</label>
             <input type="number" />
 
-            <Link>
+            <Link to={'/add-property/add-images'}>
                 <button>Next</button>
             </Link>
         </div>
