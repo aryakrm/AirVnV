@@ -9,6 +9,7 @@ import { styled } from '@mui/material/styles';
 import Switch from '@mui/material/Switch';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import AddHomeIcon from '@mui/icons-material/AddHome';
 
 function Nav() {
     const [isLocationOpen, setIsLocationOpen] = useState(false);
@@ -121,6 +122,7 @@ function Nav() {
                         <Link to={'/'}>Home</Link>
                         <Link to={'/signin'}>SignIn</Link>
                         <Link to={'/signup'}>SignUp</Link>
+                        <Link to={'/addhome'}>Add Home</Link>
                     </div>
                     <div className="toggleTheme">
                         <FormControlLabel
@@ -188,6 +190,9 @@ function Nav() {
 
                 <Link to={'/signup'}>
                     <PersonAddAltIcon fontSize="large" />
+                </Link>
+                <Link to={'/addhome'}>
+                    <AddHomeIcon fontSize="large" />
                 </Link>
             </div>
         </div>
