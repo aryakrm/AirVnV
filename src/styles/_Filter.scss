@@ -1,0 +1,70 @@
+@use './colors' as colors;
+
+.filter-wrapper {
+    &-button {
+    }
+
+    &-popup {
+        position: absolute;
+        display: none;
+        height: 30rem;
+        gap: 4rem;
+        background-color: rgb(247, 214, 174);
+        &-country {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            max-width: 30rem;
+            height: 30rem;
+            position: relative;
+            &__input {
+                font-size: 1.5rem;
+                padding: 1rem;
+                border-radius: 0.7rem;
+                border: 5px solid beige;
+            }
+
+            &-dropdown {
+                max-width: 30rem;
+                display: flex;
+                flex-direction: column;
+                &__item {
+                    padding: 1rem;
+                    background-color: rgb(193, 193, 193);
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: rgb(86, 79, 79);
+                    }
+                }
+            }
+        }
+
+        &-city {
+            position: relative;
+            &__input {
+                font-size: 1.5rem;
+                padding: 1rem;
+                border-radius: 0.7rem;
+                border: 5px solid beige;
+            }
+
+            &-dropdown {
+                display: flex;
+                flex-direction: column;
+                &__item {
+                    padding: 1rem;
+                    background-color: rgb(193, 193, 193);
+                    &:hover {
+                        cursor: pointer;
+                        background-color: rgb(86, 79, 79);
+                    }
+                }
+            }
+        }
+        &-apply {
+            margin: 0 auto;
+            align-self: flex-end;
+        }
+    }
+}

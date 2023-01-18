@@ -1,0 +1,39 @@
+@use './colors' as colors;
+
+.addAboutYourPlace-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    &-title {
+        padding: 1rem;
+        width: 100%;
+        font-size: 10rem;
+        font-weight: 600;
+    }
+    &-description {
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 40rem;
+        &__par {
+            max-width: 50%;
+            font-weight: 500;
+            line-height: 1.5;
+            font-size: 2rem;
+            color: #3b5566;
+        }
+
+        &__img {
+            max-width: 50%;
+        }
+    }
+
+    &-continue {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

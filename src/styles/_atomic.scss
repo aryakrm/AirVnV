@@ -1,0 +1,54 @@
+@use './colors' as colors;
+
+.buttonIt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0.5em 3em;
+    color: white;
+    background-color: #5f5bfe;
+    border-radius: 100px;
+    transition-duration: 300ms;
+    font-size: 2rem;
+    font-weight: 600;
+    &:hover {
+        background-color: #002640;
+    }
+}
+
+.filterButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    transition-duration: 300ms;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: rgb(165, 165, 131);
+    &:hover {
+        background-color: rgb(114, 114, 97);
+    }
+}
+
+.arrow-after:hover:after {
+    content: '';
+    position: absolute;
+    animation-name: arrow;
+    animation-duration: 50ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes arrow {
+    0% {
+        content: '>';
+        right: 2rem;
+    }
+
+    100% {
+        content: '->';
+        right: 1rem;
+    }
+}
